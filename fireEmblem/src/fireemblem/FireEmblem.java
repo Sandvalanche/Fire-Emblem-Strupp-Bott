@@ -5,12 +5,11 @@
  */
 package fireemblem;
 
-
+import byui.cit260.almostFireEmblem.model.Dialogue;
 import byui.cit260.almostFireEmblem.model.Game;
+import byui.cit260.almostFireEmblem.model.Item;
 import byui.cit260.almostFireEmblem.model.Location;
 import byui.cit260.almostFireEmblem.model.Map;
-import byui.cit260.almostFireEmblem.model.Dialogue;
-import byui.cit260.almostFireEmblem.model.Item;
 import byui.cit260.almostFireEmblem.model.Person;
 import byui.cit260.almostFireEmblem.model.Player;
 import byui.cit260.almostFireEmblem.model.Weapon;
@@ -51,7 +50,7 @@ public class FireEmblem {
         playerOne.setBestTime(8.00);    
         String playerInfo = playerOne.toString();;
         System.out.println(playerInfo);
-       
+        
         // Person class test
         Person personOne = new Person();
         
@@ -100,7 +99,8 @@ public class FireEmblem {
         weaponTuna.setDamage(5);
         
         //String weaponTuna = weaponTuna.toString();
-        System.out.println(weaponTuna);    
+        System.out.println(weaponTuna);
+        
     }
     
 }
