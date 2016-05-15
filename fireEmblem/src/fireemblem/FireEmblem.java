@@ -5,8 +5,11 @@
  */
 package fireemblem;
 
+import byui.cit260.almostFireEmblem.model.Dialogue;
+import byui.cit260.almostFireEmblem.model.Item;
 import byui.cit260.almostFireEmblem.model.Person;
 import byui.cit260.almostFireEmblem.model.Player;
+import byui.cit260.almostFireEmblem.model.Weapon;
 
 /**
  *
@@ -42,6 +45,40 @@ public class FireEmblem {
         
         String personInfo = personOne.toString();
         System.out.println(personInfo);
+        
+        // Dialogue class test
+        Dialogue dialogueBlarBlar = new Dialogue();
+        
+        dialogueBlarBlar.setTalk(" So we was fightin over the same scrap of meat, and that was when our lips accidently touched,");
+        dialogueBlarBlar.setResponse(" I am reponding to this story");
+        
+        //String dialogueBlarBlar = dialogueBlarBlar.toString();
+        System.out.println(dialogueBlarBlar);
+        
+        
+        // Item test
+        Item itemTape = new Item();
+        
+        itemTape.setName(" Duct Tape");
+        itemTape.setDescription(" A roll of magically grey tape. It'll mend even the most broken of hearts. At least that is what it says.");
+        itemTape.setType(" Spiffy");
+        itemTape.setEffect(" Repair 5 HP");
+        itemTape.setAttribute(" This is an attrbute");
+        
+        //String itemTape = itemTape.toString();
+        System.out.println(itemTape);
+        
+        
+        // Weapon test
+        Weapon weaponTuna = new Weapon();
+        
+        weaponTuna.setName("Raw Tuna");
+        weaponTuna.setType("Sword");
+        weaponTuna.setDamage(5);
+        
+        //String weaponTuna = weaponTuna.toString();
+        System.out.println(weaponTuna);
+        
     }
     
 }
