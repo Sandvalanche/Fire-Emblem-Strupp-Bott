@@ -5,6 +5,7 @@
  */
 package fireemblem;
 
+import byui.cit260.almostFireEmblem.model.Person;
 import byui.cit260.almostFireEmblem.model.Player;
 
 /**
@@ -24,6 +25,23 @@ public class FireEmblem {
         
         String playerInfo = playerOne.toString();;
         System.out.println(playerInfo);
+        
+        // Person class test
+        Person personOne = new Person();
+        
+        personOne.setName(" Old Man McGuggit");
+        personOne.setDescription("A hobo from Gravity Falls OR. Once accidently kissed a racoon.");
+        personOne.setStrength(12);
+        personOne.setDefense(13);
+        personOne.setSpeed(4);
+        personOne.setHp(29);
+        personOne.setTurn(5);
+        personOne.setLocation("A,6");
+        personOne.setItems("Roll of ductape, 4 cheerios");
+        personOne.setWeapon("Raw Tuna");
+        
+        String personInfo = personOne.toString();
+        System.out.println(personInfo);
     }
     
 }
