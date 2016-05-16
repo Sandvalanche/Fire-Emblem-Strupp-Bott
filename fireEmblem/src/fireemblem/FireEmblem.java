@@ -13,6 +13,10 @@ import byui.cit260.almostFireEmblem.model.Map;
 import byui.cit260.almostFireEmblem.model.Person;
 import byui.cit260.almostFireEmblem.model.Player;
 import byui.cit260.almostFireEmblem.model.Weapon;
+import byui.cit260.almostFireEmblem.model.Game;
+import byui.cit260.almostFireEmblem.model.Map;
+import byui.cit260.almostFireEmblem.model.Location;
+
 
 /**
  *
