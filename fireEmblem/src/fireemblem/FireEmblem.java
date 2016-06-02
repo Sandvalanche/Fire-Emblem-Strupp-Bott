@@ -5,7 +5,9 @@
  */
 package fireemblem;
 
-import byui.cit260.almostFireEmblem.model.Dialogue;
+import byui.cit260.FireEmblem.view.StartProgram;
+
+/*import byui.cit260.almostFireEmblem.model.Dialogue;
 import byui.cit260.almostFireEmblem.model.Game;
 import byui.cit260.almostFireEmblem.model.Item;
 import byui.cit260.almostFireEmblem.model.Location;
@@ -15,7 +17,7 @@ import byui.cit260.almostFireEmblem.model.Player;
 import byui.cit260.almostFireEmblem.model.Weapon;
 import byui.cit260.almostFireEmblem.model.Game;
 import byui.cit260.almostFireEmblem.model.Map;
-import byui.cit260.almostFireEmblem.model.Location;
+import byui.cit260.almostFireEmblem.model.Location;*/
 
 
 /**
@@ -28,8 +30,11 @@ public class FireEmblem {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        
+        StartProgram startProgram = new StartProgram();
+        startProgram.displayStartProgram();
    
-        Map mapOne = new Map();
+        /*Map mapOne = new Map();
         mapOne.setRow (2);
         mapOne.setColumn (3);
         String mapInfo = mapOne.toString();
@@ -103,7 +108,7 @@ public class FireEmblem {
         weaponTuna.setDamage(5);
         
         //String weaponTuna = weaponTuna.toString();
-        System.out.println(weaponTuna);
+        System.out.println(weaponTuna);*/
         
     }
     
