@@ -32,6 +32,9 @@ public class FireEmblem {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        
+        StartProgramView startProgram = new StartProgramView();
+        startProgram.displayStartProgramView();
    
        /* Map mapOne = new Map();
         mapOne.setRow (2);
