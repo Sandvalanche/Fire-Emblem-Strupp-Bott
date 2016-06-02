@@ -12,9 +12,9 @@ import static org.junit.Assert.*;
  *
  * @author Jacob
  */
-public class controlTest {
+public class ActionControlTest {
     
-    public controlTest() {
+    public ActionControlTest() {
     }
 
     /**
@@ -27,7 +27,7 @@ public class controlTest {
         int attackWeapon = 2;
         double range = 1.0;
         double damageTotal = 6.0;
-        control instance = new control();
+        ActionControl instance = new ActionControl();
         double expResult = 6.0;
         double result = instance.calcDamageStep(attackStrength, attackWeapon, range, damageTotal);
         assertEquals(expResult, result, 0.0);

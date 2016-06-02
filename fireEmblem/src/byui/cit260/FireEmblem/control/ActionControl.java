@@ -9,7 +9,7 @@ package byui.cit260.FireEmblem.control;
  *
  * @author Jacob
  */
-public class control {
+public class ActionControl {
 
 public double calcDamageStep (int attackStrength, int attackWeapon, double range, double damageTotal) {
 	if (attackStrength < 0   ||  attackWeapon < 0) {  
