@@ -5,6 +5,8 @@
  */
 package byui.cit260.FireEmblem.view;
 
+import byui.cit260.FireEmblem.control.GameControl;
+import byui.cit260.almostFireEmblem.model.Player;
 import java.util.Scanner;
 
 /**
@@ -73,7 +75,27 @@ public class StartProgramView {
 }
 
     private boolean doAction(String playersName) {
-        System.out.println("\n*** doAction() called ***");
+        if (playersName.length() < 2) {
+        System.out.println("\nInvaid players name: " +
+                            "The name must be greater than one character in length");
+        return false;
+        }
+        
+        // call createPlayer() control function
+        Player player = GameControl.createPlayer(playersName);
+        
+        if (player == null) {  // if unsuccessful
+            System.out.println("\nError creating the player.");
+            return false;
+        }  
+        // display next view
+        this.displayNextView(player);
         return true;
     }
+
+    private void displayNextView(Player player) {
+        System.out.println("\n*** displayNextView() called ***");
+    }
 }
+    
+    
