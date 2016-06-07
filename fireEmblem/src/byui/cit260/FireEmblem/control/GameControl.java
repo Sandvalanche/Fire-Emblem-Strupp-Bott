@@ -6,6 +6,7 @@
 package byui.cit260.FireEmblem.control;
 
 import byui.cit260.almostFireEmblem.model.Player;
+import fireemblem.FireEmblem;
 
 /**
  *
@@ -13,10 +14,23 @@ import byui.cit260.almostFireEmblem.model.Player;
  */
 public class GameControl {
     
-    public static Player createPlayer(String playersName) {
-        System.out.println("*** createPlayer() function called ***");
-        return new Player();
+    public static Player createPlayer(String name) {
+        /* System.out.println("*** createPlayer() function called ***");
+        return new Player(); */
+        if (name == null) {
+            return null;
+        }
         
+        Player player = new Player();
+        player.setName(name);
+        
+        FireEmblem.setPlayer(player);
+        
+        return player;
+    }
+
+    public static void createNewGame(Player player) {
+        System.out.println("\n*** createNewGame stub function called ***");    
     }
     
 }
