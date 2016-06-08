@@ -23,11 +23,12 @@ public class MainMenuView {
                 + "\n | Main Menu          |"
                 + "\n------------------"
                 + "\nN - Start new game"
-                + "\nG - Get and start saved game"
-                + "\nH - Get hep on how to play the game"
+                + "\nG - Load game"
+                + "\nH - Get help on how to play the game"
                 + "\nS - Save game"
                 + "\nQ - Quit"
-                + "\n----------------------------------------";    }
+                + "\n----------------------------------------";    
+    }
 
     public void displayMainMenuView() {
         

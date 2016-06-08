@@ -20,14 +20,14 @@ public class HelpMenuView {
                 + "\n-------------------------------------"
                 + "\n | Help Menu          |"
                 + "\n------------------"
-                + "\nN - Start new game"
-                + "\nG - Get and start saved game"
-                + "\nH - Get hep on how to play the game"
-                + "\nS - Save game"
-                + "\nQ - Quit"
+                + "\nM - How to move"
+                + "\nA - How to attack and other violence explained"
+                + "\nE - Exploring spaces & getting enemy info"
+                + "\nI - Items explained"
+                + "\nQ - Quit "
                 + "\n----------------------------------------";    }
 
-    public void displayMainMenuView() {
+    public void displayHelpMenuView() {
         
         boolean done = false;
         do {
@@ -51,17 +51,20 @@ public class HelpMenuView {
         choice = choice.toUpperCase();
         
         switch (choice) {
-            case "N":  // create and start a new game
-                this.startNewGame();
+            case "M":  // create and start a new game
+                this.displayHowToMove();
                 break;
-            case "G":  // get and start an existing game
-                this.startExistingGame();
+            case "A":  // get and start an existing game
+                this.displayHowToAttack();
                 break;
-            case "H": // display the help menu
-                this.displayHelpMenu();
+            case "E": // display the help menu
+                this.displayHowToExplore();
                 break;
-            case "S":
-                this.saveGame();
+            case "I":
+                this.displayHowItemsWork();
+                break;
+            case "T":
+                this.displayHowToTalk();
                 break;
             default:
                 System.out.println("\n*** Invaid selection *** Try again");
@@ -75,18 +78,31 @@ public class HelpMenuView {
         GameControl.createNewGame(FireEmblem.getPlayer());
         // System.out.println("*** startNewGame function called ***");    }
 
-        GameMenuView gameMenu = new GameMenuView();
-        gameMenu.displayMenu();
-    }
-    
-    private void startExistingGame() {
-        System.out.println("*** startExistingFunction function called ***");   
+        HelpMenuView HelpMenu = new HelpMenuView();
+        HelpMenu.displayMenu();
     }
 
-    private void displayHelpMenu() {
-        System.out.println("*** displayHelpMenu function called ***");    }
+    private void displayHowToMove() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
-    private void saveGame() {
-        System.out.println("*** startExistingGame function called ***");
+    private void displayHowToAttack() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void displayHowToExplore() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void displayHowItemsWork() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void displayHowToTalk() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void displayMenu() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
