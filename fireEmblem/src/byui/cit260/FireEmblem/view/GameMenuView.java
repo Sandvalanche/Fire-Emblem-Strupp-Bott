@@ -12,7 +12,7 @@ package byui.cit260.FireEmblem.view;
 public class GameMenuView {
 
     void displayMenu() {
-       System.out.println("\n *** displayMenu called");
+       System.out.println("*** displayMenu() called for NEW GAME ***");
     }
     
 }

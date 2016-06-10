@@ -7,6 +7,7 @@ package byui.cit260.FireEmblem.view;
 import byui.cit260.FireEmblem.control.GameControl;
 import byui.cit260.almostFireEmblem.model.GameMenuView;
 import fireemblem.FireEmblem;
+import java.util.Scanner;
 /**
  *
  * @author Jacob
@@ -24,7 +25,7 @@ public class HelpMenuView {
                 + "\nA - How to attack and other violence explained"
                 + "\nE - Exploring spaces & getting enemy info"
                 + "\nI - Items explained"
-                + "\nQ - Quit "
+                + "\nQ - Quit and go back to Main Menu"
                 + "\n----------------------------------------";    }
 
     public void displayHelpMenuView() {
@@ -42,8 +43,23 @@ public class HelpMenuView {
 }
 
     private String getMenuOption() {
-        System.out.println("\n*** getMenuOption() function called ***");
-        return "N";
+        Scanner keyboard = new Scanner(System.in);
+        String value = ""; // value to be returned
+        boolean valid = false;  // initialize to not valid
+        
+        while (!valid) { // loop while an invalid value is enter
+            System.out.println("\n" + this.menu);
+            
+            value = keyboard.nextLine();  // get next line typed on keyboard
+            value = value.trim();  // trim off leading and trailing blanks
+            
+            if (value.length() < 1) {  // value is blank
+                System.out.println("\nInvalid value: value can not be blank");
+                continue;
+            }
+            break;  // end the loop
+        }
+        return value;  // return the value entered
     }
 
     private boolean doAction(String choice) {
@@ -83,26 +99,26 @@ public class HelpMenuView {
     }
 
     private void displayHowToMove() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("*** displayHowToMove() called***");
     }
 
     private void displayHowToAttack() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("*** displayHowToAttack() called***");
     }
 
     private void displayHowToExplore() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("*** displayHowToExplore() called***");
     }
 
     private void displayHowItemsWork() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       System.out.println("*** displayHowItemsWork() called***");
     }
 
     private void displayHowToTalk() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       System.out.println("*** displayHowToTalk() called***");
     }
 
     private void displayMenu() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("*** displayMenu() called***");
     }
 }
