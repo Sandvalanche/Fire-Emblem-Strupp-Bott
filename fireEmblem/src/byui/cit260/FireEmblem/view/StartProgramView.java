@@ -72,9 +72,10 @@ public class StartProgramView {
         }
         return value;  // return the value entered
        
-}
+    }
 
     private boolean doAction(String playersName) {
+        
         if (playersName.length() < 2) {
         System.out.println("\nInvaid players name: " +
                             "The name must be greater than one character in length");
@@ -92,18 +93,19 @@ public class StartProgramView {
         this.displayNextView(player);
         return true;
     }
-
+        
     private void displayNextView(Player player) {
         System.out.println("\n============================================="
                             + "\n Welcome to the game " + player.getName()
                             + "\n We hope you have a lot of fun!"
                             + "\n==========================================");
-    // Create MainMenuView object
-    MainMenuView mainMenuView = new MainMenuView();
-            
-    // Display the main menu view
-    mainMenuView.displayMainMenuView();  
+        
+        //Create MainMenuView object
+        MainMenuView mainMenuView = new MainMenuView();
+                
+        mainMenuView.displayMainMenuView();
     }
 }
+
     
     

@@ -8,6 +8,9 @@ package byui.cit260.FireEmblem.view;
 import byui.cit260.FireEmblem.control.GameControl;
 import byui.cit260.almostFireEmblem.model.GameMenuView;
 import fireemblem.FireEmblem;
+import java.util.Scanner;
+
+
 
 /**
  *
@@ -18,78 +21,97 @@ public class MainMenuView {
     private String menu;
     
     public MainMenuView() {
-        this.menu = "\n"
-                + "\n-------------------------------------"
-                + "\n | Main Menu          |"
-                + "\n------------------"
-                + "\nN - Start new game"
-                + "\nG - Load game"
-                + "\nH - Get help on how to play the game"
-                + "\nS - Save game"
-                + "\nQ - Quit"
-                + "\n----------------------------------------";    
+        this.menu ="\n"
+                        + "\n==============="
+                + "\nMAIN MENU"
+                +"\n----------------------------"
+                + "\nN = start NEW game"
+                +"\nG = GET a saved game"
+                +"\nH = HELP menu"
+                + "\nS = SAVE game"
+                +"\nQ = QUIT, we will be sad to see you go!"
+                +"\n";
     }
-
-    public void displayMainMenuView() {
-        
-        boolean done = false;
-        do {
-            // prompt for and get players name
-        String menuOption = this.getMenuOption();
-        if (menuOption.toUpperCase().equals("Q")) // user wants to quit
-        return; // exit the game
-
-// do the requested action and display the next view
-    done = this.doAction(menuOption);
-    }   while (!done);
-}
+    
+   void displayMainMenuView() {
+       
+       boolean done = false; // set flag to not done
+       do {
+           // prompt for and get players name
+           String menuOption = this.getMenuOption();
+           if  (menuOption.toUpperCase().equals("Q"))  // User wants to quit
+               return; // exit the game
+           
+           done = this.doAction(menuOption);
+           
+       }while (!done);
+   }
 
     private String getMenuOption() {
-        System.out.println("\n*** getMenuOption() function called ***");
-        return "N";
+        Scanner keyboard = new Scanner(System.in);
+        String value = ""; // value to be returned
+        boolean valid = false;  // initialize to not valid
+        
+        while (!valid) { // loop while an invalid value is enter
+            System.out.println("\n" + this.menu);
+            
+            value = keyboard.nextLine();  // get next line typed on keyboard
+            value = value.trim();  // trim off leading and trailing blanks
+            
+            if (value.length() < 1) {  // value is blank
+                System.out.println("\nInvalid value: value can not be blank");
+                continue;
+            }
+            break;  // end the loop
+        }
+        return value;  // return the value entered
     }
 
     private boolean doAction(String choice) {
-    
-        choice = choice.toUpperCase();
+        
+        choice = choice.toUpperCase(); // convert to caps
         
         switch (choice) {
-            case "N":  // create and start a new game
+            case "N":  // new game
                 this.startNewGame();
                 break;
             case "G":  // get and start an existing game
                 this.startExistingGame();
                 break;
-            case "H": // display the help menu
+            case "H":  //help menu
                 this.displayHelpMenu();
                 break;
-            case "S":
+            case"S": //save game
                 this.saveGame();
                 break;
             default:
-                System.out.println("\n*** Invaid selection *** Try again");
-                break;
+                System.out.println("\n*** Invalid Selection *** Try again yo!");
+               break;
         }
-        return false;
+        
+        return false; 
     }
 
-    private void startNewGame() {
-        // create a new game
-        GameControl.createNewGame(FireEmblem.getPlayer());
-        // System.out.println("*** startNewGame function called ***");    }
+   private void startNewGame() {
+       GameControl.createNewGame(FireEmblem.getPlayer());
+       
+       //display the game menu
+       GameMenuView gameMenu = new GameMenuView();
+       gameMenu.displayMenu();
+   }
+   
+   private void startExistingGame() {
+       System.out.println(" *** startExistingGame called");
+   }
+   
+   private void saveGame() {
+        System.out.println(" *** saveGame called");
+   }
+   
+   private void displayHelpMenu() {
+        System.out.println(" *** displayHelpMenu called");
+   }
 
-        GameMenuView gameMenu = new GameMenuView();
-        gameMenu.displayMenu();
-    }
-    
-    private void startExistingGame() {
-        System.out.println("*** startExistingFunction function called ***");   
-    }
-
-    private void displayHelpMenu() {
-        System.out.println("*** displayHelpMenu function called ***");    }
-
-    private void saveGame() {
-        System.out.println("*** startExistingGame function called ***");
-    }
 }
+           
+
