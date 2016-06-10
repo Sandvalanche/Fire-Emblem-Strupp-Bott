@@ -5,7 +5,6 @@
  */
 package byui.cit260.FireEmblem.view;
 import byui.cit260.FireEmblem.control.GameControl;
-import byui.cit260.almostFireEmblem.model.GameMenuView;
 import fireemblem.FireEmblem;
 /**
  *
@@ -24,6 +23,7 @@ public class HelpMenuView {
                 + "\nA - How to attack and other violence explained"
                 + "\nE - Exploring spaces & getting enemy info"
                 + "\nI - Items explained"
+                + "\nT - How to talk to people"
                 + "\nQ - Quit "
                 + "\n----------------------------------------";    }
 
