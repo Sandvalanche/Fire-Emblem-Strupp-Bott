@@ -6,7 +6,6 @@
 package byui.cit260.FireEmblem.view;
 
 import byui.cit260.FireEmblem.control.GameControl;
-import byui.cit260.almostFireEmblem.model.GameMenuView;
 import fireemblem.FireEmblem;
 import java.util.Scanner;
 

@@ -5,7 +5,6 @@
  */
 package byui.cit260.FireEmblem.view;
 import byui.cit260.FireEmblem.control.GameControl;
-import byui.cit260.almostFireEmblem.model.GameMenuView;
 import fireemblem.FireEmblem;
 import java.util.Scanner;
 /**
@@ -27,20 +26,6 @@ public class HelpMenuView {
                 + "\nI - Items explained"
                 + "\nQ - Quit and go back to Main Menu"
                 + "\n----------------------------------------";    }
-
-    public void displayHelpMenuView() {
-        
-        boolean done = false;
-        do {
-            // prompt for and get players name
-        String menuOption = this.getMenuOption();
-        if (menuOption.toUpperCase().equals("Q")) // user wants to quit
-        return; // exit the game
-
-// do the requested action and display the next view
-    done = this.doAction(menuOption);
-    }   while (!done);
-}
 
     private String getMenuOption() {
         Scanner keyboard = new Scanner(System.in);
@@ -120,5 +105,9 @@ public class HelpMenuView {
 
     private void displayMenu() {
         System.out.println("*** displayMenu() called***");
+    }
+
+    void displayHelpMenuView() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
