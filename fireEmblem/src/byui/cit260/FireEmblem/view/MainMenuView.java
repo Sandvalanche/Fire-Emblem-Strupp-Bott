@@ -29,6 +29,7 @@ public class MainMenuView {
                 +"\nH = HELP menu"
                 + "\nS = SAVE game"
                 +"\nQ = QUIT, we will be sad to see you go!"
+                +"\nA = ACTION MENU (this will not be here normally, but it is here to call the action menu class)"
                 +"\n";
     }
     
@@ -83,6 +84,9 @@ public class MainMenuView {
             case"S": //save game
                 this.saveGame();
                 break;
+            case"A": //ACTION MENU (remove later)
+                this.displayActionMenu();
+                break;
             default:
                 System.out.println("\n*** Invalid Selection *** Try again yo!");
                break;
@@ -112,6 +116,12 @@ public class MainMenuView {
                 
         helpMenuView.displayHelpMenuView();
    }
+
+    private void displayActionMenu() {
+        ActionMenuView actionMenuView = new ActionMenuView();
+        
+        actionMenuView.displayActionMenuView();
+    }
 
 }
            
