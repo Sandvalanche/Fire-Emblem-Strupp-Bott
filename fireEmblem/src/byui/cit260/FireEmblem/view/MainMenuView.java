@@ -16,12 +16,12 @@ import java.util.Scanner;
  *
  * @author Jacob
  */
-public class MainMenuView {
+public class MainMenuView extends View {
     
-    private String menu;
+
     
     public MainMenuView() {
-        this.menu ="\n"
+        super("\n"
                         + "\n==============="
                 + "\nMAIN MENU"
                 +"\n----------------------------"
@@ -31,48 +31,17 @@ public class MainMenuView {
                 + "\nS = SAVE game"
                 +"\nQ = QUIT, we will be sad to see you go!"
                 +"\nA = ACTION MENU (this will not be here normally, but it is here to call the action menu class)"
-                +"\n";
+                +"\n");
     }
     
-   void displayMainMenuView() {
-       
-       boolean done = false; // set flag to not done
-       do {
-           // prompt for and get players name
-           String menuOption = this.getMenuOption();
-           if  (menuOption.toUpperCase().equals("Q"))  // User wants to quit
-               return; // exit the game
-           
-           done = this.doAction(menuOption);
-           
-       }while (!done);
-   }
 
-    private String getMenuOption() {
-        Scanner keyboard = new Scanner(System.in);
-        String value = ""; // value to be returned
-        boolean valid = false;  // initialize to not valid
-        
-        while (!valid) { // loop while an invalid value is enter
-            System.out.println("\n" + this.menu);
-            
-            value = keyboard.nextLine();  // get next line typed on keyboard
-            value = value.trim();  // trim off leading and trailing blanks
-            
-            if (value.length() < 1) {  // value is blank
-                System.out.println("\nInvalid value: value can not be blank");
-                continue;
-            }
-            break;  // end the loop
-        }
-        return value;  // return the value entered
-    }
 
-    private boolean doAction(String choice) {
+    @Override
+    public boolean doAction(String value) {
         
-        choice = choice.toUpperCase(); // convert to caps
+        value = value.toUpperCase(); // convert to caps
         
-        switch (choice) {
+        switch (value) {
             case "N":  // new game
                 this.startNewGame();
                 break;
