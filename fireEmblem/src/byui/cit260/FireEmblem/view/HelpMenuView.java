@@ -12,12 +12,10 @@ import java.util.Scanner;
  *
  * @author Jacob
  */
-public class HelpMenuView {
-    
-    private String menu;
+public class HelpMenuView extends View {
     
     public HelpMenuView() {
-        this.menu = "\n"
+        super("\n"
                 + "\n-------------------------------------"
                 + "\n | Help Menu          |"
                 + "\n------------------"
@@ -26,43 +24,11 @@ public class HelpMenuView {
                 + "\nE - Exploring spaces & getting enemy info"
                 + "\nI - Items explained"
                 + "\nQ - Quit and go back to Main Menu"
-                + "\n----------------------------------------";    }
+                + "\n----------------------------------------");    }
 
-    public void displayHelpMenuView() {
-        
-        boolean done = false;
-        do {
-            // prompt for and get players name
-        String menuOption = this.getMenuOption();
-        if (menuOption.toUpperCase().equals("Q")) // user wants to quit
-        return; // exit the game
 
-// do the requested action and display the next view
-    done = this.doAction(menuOption);
-    }   while (!done);
-}
-
-    private String getMenuOption() {
-        Scanner keyboard = new Scanner(System.in);
-        String value = ""; // value to be returned
-        boolean valid = false;  // initialize to not valid
-        
-        while (!valid) { // loop while an invalid value is enter
-            System.out.println("\n" + this.menu);
-            
-            value = keyboard.nextLine();  // get next line typed on keyboard
-            value = value.trim();  // trim off leading and trailing blanks
-            
-            if (value.length() < 1) {  // value is blank
-                System.out.println("\nInvalid value: value can not be blank");
-                continue;
-            }
-            break;  // end the loop
-        }
-        return value;  // return the value entered
-    }
-
-    private boolean doAction(String choice) {
+    @Override
+    public boolean doAction(String choice) {
     
         choice = choice.toUpperCase();
         
