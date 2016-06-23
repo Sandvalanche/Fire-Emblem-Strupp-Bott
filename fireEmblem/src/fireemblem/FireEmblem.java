@@ -37,9 +37,6 @@ public class FireEmblem {
 
   
     public static void main(String[] args) {
-        
-        StartProgramView startProgram = new StartProgramView();
-        startProgram.displayStartProgramView();
      
        StartProgramView startProgramView = new StartProgramView();
        startProgramView.displayStartProgramView();
