@@ -83,13 +83,13 @@ public class MainMenuView extends View {
    private void displayHelpMenu() {
         HelpMenuView helpMenuView = new HelpMenuView();
                 
-        helpMenuView.displayHelpMenuView();
+        helpMenuView.display();
    }
 
     private void displayActionMenu() {
         ActionMenuView actionMenuView = new ActionMenuView();
         
-        actionMenuView.displayActionMenuView();
+        actionMenuView.display();
     }
 
 }
