@@ -11,20 +11,20 @@ package byui.cit260.FireEmblem.control;
  */
 public class ActionControl {
 
-public double calcDamageStep (int attackStrength, int attackWeapon, double range, double damageTotal) {
-	if (attackStrength < 0   ||  attackWeapon < 0) {  
-		return -1;
-        } 
-        
-	if (range == 2) {
-		int damageDealt = attackStrength + attackWeapon; 		
-	}
-        // Else the range is 1
-	else {
-                    double damageDealt = (attackStrength + attackWeapon) * 1.5 ; 
-                    
-                    return damageDealt;
+    public double calcDamageStep(int attackStrength, int attackWeapon, double range) {
+        if (attackStrength < 0 || attackWeapon < 0) {
+            return -1;
         }
-           return damageTotal;
-    }         
+
+        double damageDealt;
+        if (range == 2) {
+            damageDealt = attackStrength + attackWeapon;
+        } // Else the range is 1
+        else {
+            damageDealt = (attackStrength + attackWeapon) * 1.5;        
+        }
+        
+        return damageDealt;
+
+    }
 }

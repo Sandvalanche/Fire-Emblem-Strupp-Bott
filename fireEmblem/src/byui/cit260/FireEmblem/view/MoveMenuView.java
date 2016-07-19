@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author Jacob
  */
-public class MoveMenuView {
+public class MoveMenuView extends View {
     
     
     private String menu;
@@ -49,7 +49,8 @@ public class MoveMenuView {
         return value;  // return the value entered
     }
 
-    private boolean doAction(String choice) {
+    @Override
+    public boolean doAction(String choice) {
         
         choice = choice.toUpperCase(); // convert to caps
         
@@ -93,6 +94,16 @@ public class MoveMenuView {
     }
 
     private void returnToGameMenu() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void display() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public String getInput() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

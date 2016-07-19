@@ -26,10 +26,10 @@ public class ActionControlTest {
         int attackStrength = 2;
         int attackWeapon = 2;
         double range = 1.0;
-        double damageTotal = 6.0;
+        double damageDealt = 6.0;
         ActionControl instance = new ActionControl();
         double expResult = 6.0;
-        double result = instance.calcDamageStep(attackStrength, attackWeapon, range, damageTotal);
+        double result = instance.calcDamageStep(attackStrength, attackWeapon, range);
         assertEquals(expResult, result, 0.0);
     }  
 }

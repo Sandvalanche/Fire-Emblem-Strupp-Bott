@@ -20,7 +20,7 @@ public class MainMenuView extends View {
 
     
     public MainMenuView() {
-        super("\n"
+        super ("\n"
                         + "\n==============="
                 + "\nMAIN MENU"
                 +"\n----------------------------"
@@ -32,8 +32,6 @@ public class MainMenuView extends View {
                 +"\nA = ACTION MENU (this will not be here normally, but it is here to call the action menu class)"
                 +"\n");
     }
-    
-
 
     @Override
     public boolean doAction(String value) {
@@ -91,7 +89,6 @@ public class MainMenuView extends View {
         
         actionMenuView.display();
     }
-
 }
            
 

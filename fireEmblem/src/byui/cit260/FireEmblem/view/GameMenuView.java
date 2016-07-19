@@ -6,7 +6,7 @@
  */
 package byui.cit260.FireEmblem.view;
 
-public class GameMenuView {
+public class GameMenuView extends View{
     
             private String menu;
             
@@ -28,7 +28,8 @@ public class GameMenuView {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
-    private boolean doAction(String choice) {
+    @Override
+    public boolean doAction(String choice) {
     
         choice = choice.toUpperCase();
         

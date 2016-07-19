@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author Jacob
  */
-public abstract class ItemMenuView implements ViewInterface {
+public abstract class ItemMenuView extends View {
 
     protected String displayMessage;
     private String menu;
@@ -29,7 +29,7 @@ public abstract class ItemMenuView implements ViewInterface {
         this.displayMessage = message;
     }
 
-    @Override
+        @Override
        public void display() {
        
        boolean done = false; // set flag to not done
